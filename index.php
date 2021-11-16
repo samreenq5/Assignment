@@ -44,19 +44,18 @@ switch( $action ) {
             $task_to_modify = $task_list[$task_index];
         }
         break;
-   
-/*
     
     case 'Save Changes':
     
     
     case 'Cancel Changes':
-    
-    case 'Promote Task':
+ 
         
     case 'Sort Tasks':
+    	sort($task_list);
+        break; 
     
-*/
+
 }
 
 include('task_list.php');
