@@ -30,7 +30,16 @@ switch( $action ) {
     case 'Delete Item':
         $task_index = filter_input(INPUT_POST, 'taskid', FILTER_VALIDATE_INT);
         if ($task_index === NULL || $task_index === FALSE) {
-            $errors[] = 'The item cannot be deleted.';
+            $errors[] = 'The items cannot be deleted.';
+        } else {
+            unset($task_list[$task_index]);
+            $task_list = array_values($task_list);
+        }
+        break;
+    case 'Modify item':
+          $task_index = filter_input(INPUT_POST, 'taskid', FILTER_VALIDATE_INT);
+        if ($task_index === NULL || $task_index === FALSE) {
+            $errors[] = 'The items cannot be modified.';
         } else {
             unset($task_list[$task_index]);
             $task_list = array_values($task_list);
