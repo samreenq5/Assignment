@@ -58,13 +58,14 @@ switch( $action ) {
         $modified_task = '';
         }
 	break; 
+		
     
     case 'Cancel Changes':
-	$modified_task = '';
+	  $modified_task = '';
     break; 
    
     case 'Sort Items':
-	sort($task_list);
+	  sort($task_list);
     break;
     
 }
