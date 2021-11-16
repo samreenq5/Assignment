@@ -24,41 +24,39 @@ switch( $action ) {
         if (empty($new_task)) {
             $errors[] = 'The new item cannot be empty.';
         } else {
-            $task_list[] = $new_task;
+           // $task_list[] = $new_task;
+			array_push($task_list, $new_task);
         }
         break;
     case 'Delete Item':
         $task_index = filter_input(INPUT_POST, 'taskid', FILTER_VALIDATE_INT);
         if ($task_index === NULL || $task_index === FALSE) {
-            $errors[] = 'The items cannot be deleted.';
+            $errors[] = 'The item cannot be deleted.';
         } else {
             unset($task_list[$task_index]);
             $task_list = array_values($task_list);
         }
         break;
-    case 'Modify Task':
+
+    case 'Modify Item':
         $task_index = filter_input(INPUT_POST, 'taskid', FILTER_VALIDATE_INT);
         if ($task_index === NULL || $task_index === FALSE) {
-            $errors[] = 'The task cannot be modified.';
+            $errors[] = 'The item cannot be modified.';
         } else {
             $task_to_modify = $task_list[$task_index];
         }
         break;
-    
-    case 'Save Changes':
-    
-    
+		
+ /*   case 'Save Changes':
+	    
     case 'Cancel Changes':
- 
-        
-    case 'Sort Tasks':
-    	sort($task_list);
-        break; 
+	      
+*/       
+    case 'Sort Items':
+	    sort($task_list);
+		break;
     
-
 }
 
 include('task_list.php');
 ?>
-
-
