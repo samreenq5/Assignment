@@ -45,10 +45,21 @@ switch( $action ) {
             $task_to_modify = $task_list[$task_index];
         }
         break;
-		
- /*   case 'Save Changes':
-	    
+    case 'Save Changes'
+        $i = filter_input(INPUT_POST, 'modifiedtaskid', FILTER_VALIDATE_INT);
+        $modified_task = filter_input(INPUT_POST, 'modifiedtask');
+        if (empty($modified_task)) {
+        $errors[] = 'The modified task cannot be empty.';
+        } elseif($i === NULL || $i === FALSE) {
+        $errors[] = 'The task cannot be modified.';
+        } else {
+        $task_list[$i] = $modified_task;
+        $modified_task = '';
+        }
+	break; 
     case 'Cancel Changes':
+/*   
+	    
 	      
 */       
     case 'Sort Items':
