@@ -24,8 +24,7 @@ switch( $action ) {
         if (empty($new_task)) {
             $errors[] = 'The new item cannot be empty.';
         } else {
-           // $task_list[] = $new_task;
-			array_push($task_list, $new_task);
+            $task_list[] = $new_task;
         }
         break;
     case 'Delete Item':
