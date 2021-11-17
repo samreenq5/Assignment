@@ -51,11 +51,11 @@ switch( $action ) {
 	   $task_name = filter_input(INPUT_POST, 'modifiedtask');
 	   if ($task_index == NULL || $task_index == FALSE ||
 	       $task_name == NULL || $task_name == FALSE) {
-		   $errors[] = 'The task cannot be modified.';
-		   } else {
-			   $task_list[$task_index] = $task_name;
-		   }
-		   break;
+	       $errors[] = 'The task cannot be modified.';
+	 } else {
+	       $task_list[$task_index] = $task_name;
+	 }
+	 break;
 		
     
     case 'Cancel Changes':
