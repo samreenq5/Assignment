@@ -47,7 +47,7 @@ switch( $action ) {
         break;
     
     case 'Save Changes'
-	   $task_index = filter_input(INPUT_POST, 'modfiedtaskid', FILTER_VALIDATE_INT);
+	   $task_index = filter_input(INPUT_POST, 'modifiedtaskid', FILTER_VALIDATE_INT);
 	   $task_name = filter_input(INPUT_POST, 'modifiedtask');
 	   if ($task_index == NULL || $task_index == FALSE ||
 	       $task_name == NULL || $task_name == FALSE) {
@@ -67,6 +67,6 @@ switch( $action ) {
     break;
     
 }
-
+ 
 include('task_list.php');
 ?>
