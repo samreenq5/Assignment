@@ -66,11 +66,18 @@
             <label>&nbsp;</label>
             <input type="submit" name="action" value="Modify Item">
             <input type="submit" name="action" value="Delete Item">
-
-            <br><br>
+        </form>
+        <?php endif; ?>
+        
+        <?php if (count($task_list) > 1 && empty($task_to_modify)) : ?>
+		<form action="." method="post" >
+		 <?php foreach( $task_list as $task ) : ?>
+              <input type="hidden" name="tasklist[]" value="<?php echo $task; ?>">
+            <?php endforeach; ?>
+            <br>
             <label>&nbsp;</label>
             <input type="submit" name="action" value="Sort Items">
-        </form>
+		</form>
         <?php endif; ?>
 
         <!-- part 5: the modify save/cancel form -->
