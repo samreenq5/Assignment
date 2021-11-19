@@ -63,7 +63,7 @@ switch( $action ) {
     break; 
 //Sort items action
     case 'Sort Items':
-	  sort_string($task_list);
+	  sort($task_list, SORT_STRING | SORT_FLAG_CASE);
     break;
     
 }
