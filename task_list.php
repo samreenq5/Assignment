@@ -6,7 +6,7 @@
 </head>
 <body>
     <header>
-        <h1>Shopping List Manager</h1>
+        <h1 style="color:LightBlue;">Shopping List Manager</h1>
     </header>
 
     <main>
@@ -22,7 +22,7 @@
         <?php endif; ?>
 
         <!-- part 2: the tasks -->
-        <h2>Items:</h2>
+        <h2 style="color:MediumSeaGreen;">Items:</h2>
         <?php if (count($task_list) == 0) : ?>
             <p>There are no items in the list.</p>
         <?php else: ?>
@@ -35,7 +35,7 @@
         <br>
 
         <!-- part 3: the add form -->
-        <h2>Add Item:</h2>
+        <h2 style="color:Pink;">Add Item:</h2>
         <form action="." method="post" >
             <?php foreach( $task_list as $task ) : ?>
               <input type="hidden" name="tasklist[]" value="<?php echo $task; ?>">
@@ -49,7 +49,7 @@
 
         <!-- part 4: the modify/promote/delete form -->
         <?php if (count($task_list) > 0 && empty($task_to_modify)) : ?>
-        <h2>Select Item:</h2>
+        <h2 style="color:Plum;">Select Item:</h2>
         <form action="." method="post" >
             <?php foreach( $task_list as $task ) : ?>
               <input type="hidden" name="tasklist[]" value="<?php echo $task; ?>">
@@ -82,7 +82,7 @@
 
         <!-- part 5: the modify save/cancel form -->
         <?php if (!empty($task_to_modify)) : ?>
-        <h2>Item to Modify:</h2>
+        <h2 style="color:LightGreen;">Item to Modify:</h2>
         <form action="." method="post" >
             <?php foreach( $task_list as $task ) : ?>
               <input type="hidden" name="tasklist[]" value="<?php echo $task; ?>">
