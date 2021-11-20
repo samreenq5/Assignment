@@ -64,8 +64,7 @@ switch( $action ) {
 //Sort items action
     case 'Sort Items':
 	  sort($task_list, SORT_NATURAL | SORT_FLAG_CASE);
-    break;
-    
+    break;    
 }
  
 include('task_list.php');
