@@ -13,7 +13,6 @@ CREATE TABLE products (
 
 -- insert data into the database
 
-
 INSERT INTO products VALUES
 ('Milk', 1,),
 ('Bread', 2,),
