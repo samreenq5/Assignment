@@ -27,7 +27,8 @@ switch( $action ) {
             $task_list[] = $new_task;
         }
         break;
-//Delete an item action
+		
+//Delete an item 
     case 'Delete Item':
         $task_index = filter_input(INPUT_POST, 'taskid', FILTER_VALIDATE_INT);
         if ($task_index === NULL || $task_index === FALSE) {
@@ -37,7 +38,8 @@ switch( $action ) {
             $task_list = array_values($task_list);
         }
         break;
-//Modify the item action
+		
+//Modify an item 
     case 'Modify Item':
         $task_index = filter_input(INPUT_POST, 'taskid', FILTER_VALIDATE_INT);
         if ($task_index === NULL || $task_index === FALSE) {
@@ -46,7 +48,8 @@ switch( $action ) {
             $task_to_modify = $task_list[$task_index];
         }
         break;
-//Save changes to the item action
+		
+//Save changes to the modified item 
     case 'Save Changes'
 	   $task_index = filter_input(INPUT_POST, 'modifiedtaskid', FILTER_VALIDATE_INT);
 	   $task_name = filter_input(INPUT_POST, 'modifiedtask');
@@ -57,10 +60,12 @@ switch( $action ) {
 	       $task_list[$task_index] = $task_name;
 	 }
 	 break;
-//Cancel changes to the item added action
+		
+//Cancel changes to the modified item 
     case 'Cancel Changes':
 	  $modified_task = '';
     break; 
+		
 //Sort items action
     case 'Sort Items':
 	  sort($task_list, SORT_NATURAL | SORT_FLAG_CASE);
