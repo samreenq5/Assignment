@@ -69,6 +69,7 @@
         </form>
         <?php endif; ?>
         
+        <!-- make sort button appear when there's two or more items -->
         <?php if (count($task_list) > 1 && empty($task_to_modify)) : ?>
 		<form action="." method="post" >
 		 <?php foreach( $task_list as $task ) : ?>
