@@ -15,7 +15,6 @@ require_once('database.php');
 $queryProducts = 'SELECT * FROM products
                   ORDER BY productID';
 $statement3 = $db->prepare($queryProducts);
-//$statement3->bindValue(':category_id', $category_id);
 $statement3->execute();
 $products = $statement3->fetchAll();
 $statement3->closeCursor(); 
@@ -23,7 +22,6 @@ $statement3->closeCursor();
 $query = 'SELECT * FROM products ORDER BY productID';
 	$statement = $db->prepare($query);
 	$statement->execute();
-	$categories = $statement->fetchAll();
 	$statement->closeCursor();
 	
 	
@@ -50,9 +48,7 @@ $query = 'SELECT * FROM products ORDER BY productID';
         <table>
             <tr>
                 <th>Code</th>
-                <th>Item</th>
-              
-                
+                <th>Item</th>      
             </tr>
 
             <?php foreach ($products as $product) : ?>
