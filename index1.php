@@ -9,26 +9,7 @@ require_once('database.php');
         $product_id = 1;
     }
 }
-/*
-// Get name for selected category
-$queryCategory = 'SELECT * FROM categories
-                  WHERE categoryID = :category_id';
-$statement1 = $db->prepare($queryCategory);
-$statement1->bindValue(':category_id', $category_id);
-$statement1->execute();
-$category = $statement1->fetch();
-$category_name = $category['categoryName'];
-$statement1->closeCursor();
 
-
-// Get all categories
-$query = 'SELECT * FROM categories
-                       ORDER BY categoryID';
-$statement = $db->prepare($query);
-$statement->execute();
-$categories = $statement->fetchAll();
-$statement->closeCursor();
-*/
 
 // Get products 
 $queryProducts = 'SELECT * FROM products
