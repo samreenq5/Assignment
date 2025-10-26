@@ -103,6 +103,6 @@ This project is licensed under the [MIT License](LICENSE).
 Author
 
 **Samreen Qasim**
-📧 Email: [samreenfatimaqasim@gmail.com](mailto:samreenfaitmaqasim@gmail.com)
-🎓 Student at Queensland University of Technology
-💼 Interested in: Web & Mobile Application Development
+Email: [samreenfatimaqasim@gmail.com](mailto:samreenfaitmaqasim@gmail.com)
+Student at Queensland University of Technology
+Interested in: Web & Mobile Application Development
